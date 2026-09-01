@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria Projektów Scratch - Nasza Szkoła</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 20px;
+            background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+            color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Układ pionowy - projekty jeden pod drugim */
+        .gallery {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+
+        .card-header {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eef2f5;
+        }
+
+        .card-header h2 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+        }
+
+        .card-header .subtitle {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            font-weight: 600;
+        }
+
+        /* Większa szerokość okna Scratcha (680px) */
+        .scratch-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 680px;
+            aspect-ratio: 485 / 402;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+            background-color: #000;
+        }
+
+        .scratch-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Galeria Projektów Scratch</h1>
+        <p>Wystawa prac uczniów – „Interaktywna Pocztówka z Wakacji”</p>
+    </header>
+
+    <main class="gallery">
+
+        <!-- Karta Projektu 1 -->
+        <article class="card">
+            <div class="card-header">
+                <h2>Kacper</h2>
+                <div class="subtitle">Prowadzący</div>
+            </div>
+            <div class="scratch-wrapper">
+                <!-- Zastąp ID 123456789 numerem ID projektu Hani ze Scratcha -->
+                <iframe src="https://scratch.mit.edu/projects/1377011451/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+            </div>
+        </article>
+
+        <!-- Karta Projektu 2 -->
+        <article class="card">
+            <div class="card-header">
+                <h2>Uczeń</h2>
+                <div class="subtitle">klasa </div>
+            </div>
+            <div class="scratch-wrapper">
+                <!-- Zastąp ID 987654321 numerem ID projektu Kacpra ze Scratcha -->
+                <iframe src="https://scratch.mit.edu/projects/987654321/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe>
+            </div>
+        </article>
+
+        
+
+    </main>
+
+    <footer>
+        <p>Pracownia Komputerowa STEAM &copy; 2026</p>
+    </footer>
+
+</body>
+</html>
